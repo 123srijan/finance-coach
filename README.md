@@ -1,19 +1,27 @@
-Finance Coach, its features, technologies, setup steps, and required environment variables. Never put real passwords or API keys there.
+# Finance Coach
 
-## Run
+A personal finance dashboard for tracking income and expenses, reviewing spending by category, and getting budget guidance from an AI assistant.
 
-From this folder:
+## Features
+
+- Account registration and sign-in
+- Income and expense tracking
+- Spending summaries by month and category
+- Password recovery by email (requires SMTP configuration)
+- AI finance chat powered by Gemini (requires a Gemini API key)
+
+## Built with
+
+- Python and FastAPI
+- SQLAlchemy and SQLite
+- HTML, CSS, and JavaScript
+- Google Gemini API
+
+## Run locally
+
+From the project root in PowerShell:
 
 ```powershell
-python main.py < input.txt
-```
-
-Paste a sample input into `input.txt`. For interactive problems, run `python main.py` directly in the terminal instead of redirecting input.
-
-In VS Code, open this folder and use **Run contest solution** from the Run and Debug panel. The starter uses `sys.stdin.buffer` for fast input; put your solution logic in `solve()`.
-
-## Environment
-
-- Python 3.15 is available on this machine; no third-party packages are required.
-- No C++ compiler or Java/Go/Rust toolchain was detected, so this workspace currently targets Python.
-- The contest judge's supported language versions may differ from your local version. Use only features supported by the judge.
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8001
