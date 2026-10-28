@@ -1,6 +1,4 @@
-# Coding contest workspace
-
-Python starter environment for solving problems that read from standard input and write to standard output.
+Finance Coach, its features, technologies, setup steps, and required environment variables. Never put real passwords or API keys there.
 
 ## Run
 
